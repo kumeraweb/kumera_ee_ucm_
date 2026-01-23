@@ -7,6 +7,33 @@ interface Props {
 }
 
 const { title } = Astro.props
+
+const schemaData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Erika - Asesoría en Planes de Rescate Médico',
+  image: '/ejecutiva.png',
+  description:
+    'Ejecutiva comercial independiente y autorizada para la venta, cotización y asesoría de planes de rescate médico móvil y ambulancias privadas en Chile. Intermediación de servicios para familias y empresas.',
+  telephone: `+${CONTACT_INFO.phone}`,
+  priceRange: '$$',
+  areaServed: {
+    '@type': 'Country',
+    name: 'Chile'
+  },
+  makesOffer: {
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: 'Gestión y Contratación de Planes de Salud'
+    }
+  },
+  provider: {
+    '@type': 'Person',
+    name: CONTACT_INFO.name,
+    jobTitle: 'Ejecutiva de Ventas Autorizada'
+  }
+}
 ---
 
 <!doctype html>
@@ -15,11 +42,14 @@ const { title } = Astro.props
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
     <meta
       name="description"
-      content="Asesoría experta en planes de rescate médico. Cotiza con Erika tu plan de ambulancia privada."
+      content="Asesoría experta e independiente en planes de rescate médico. Cotiza con Erika tu plan de ambulancia privada. Gestión rápida y autorizada."
     />
+
     <title>{title}</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,7 +57,8 @@ const { title } = Astro.props
       rel="stylesheet"
     />
 
-    <!-- Google tag (gtag.js) -->
+    <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+
     <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=AW-17899206383"
     ></script>
     <script is:inline>
@@ -45,13 +76,15 @@ const { title } = Astro.props
 
     <footer class="bg-slate-900 text-white py-12 px-4 mt-20 text-center">
       <div class="max-w-4xl mx-auto">
-        <p class="text-slate-400 text-sm mb-4">
-          <strong>Aviso Legal:</strong> Sitio web de asesoría independiente gestionado por {
+        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+          <strong>Aviso Legal:</strong> Este sitio web pertenece a una
+          <span class="text-white font-bold">Ejecutiva de Ventas Independiente</span> ({
             CONTACT_INFO.name
-          }, {CONTACT_INFO.title}. No somos la central de urgencias de la clínica.
+          }). La gestión de los servicios médicos y ambulancias es responsabilidad exclusiva de las
+          empresas proveedoras contratadas. No somos una central de urgencias médicas directa.
         </p>
         <p class="text-slate-500 text-xs">
-          © {new Date().getFullYear()} Servicios de Rescate Móvil.
+          © {new Date().getFullYear()} Servicios de Rescate Móvil - Gestión Comercial.
         </p>
       </div>
     </footer>
