@@ -1,0 +1,74 @@
+---
+import { CONTACT_INFO, getWhatsAppLink } from '../data/config'
+---
+
+<section class="relative bg-blue-900 overflow-hidden">
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/hero.png"
+      alt="Flota ambulancias"
+      class="w-full h-full object-cover object-center opacity-50"
+    />
+
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/80 to-blue-900/20">
+    </div>
+  </div>
+
+  <div
+    class="relative z-10 max-w-7xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center"
+  >
+    <div class="text-white space-y-6">
+      <div
+        class="inline-block bg-blue-800/80 backdrop-blur-sm border border-blue-400/30 px-4 py-1 rounded-full text-blue-100 text-sm font-bold uppercase tracking-wider mb-2"
+      >
+        Atención Inmediata
+      </div>
+
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-black leading-tight drop-shadow-lg">
+        Contrata hoy tu Plan de Rescate Médico <span class="text-blue-300"
+          >sin trámites ni esperas.</span
+        >
+      </h1>
+
+      <p class="text-xl text-blue-50 font-medium leading-relaxed max-w-lg drop-shadow-md">
+        Soy <strong>{CONTACT_INFO.name}</strong>, tu ejecutiva personal. Te ayudo a elegir la mejor
+        cobertura de ambulancia privada para tu familia y empresa.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 pt-4">
+        <a
+          href={`tel:${CONTACT_INFO.phone}`}
+          class="bg-red-600 hover:bg-red-700 text-white text-center px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all hover:-translate-y-1 hover:shadow-red-900/50"
+        >
+          Llamar a tu ejecutiva Ahora
+        </a>
+        <a
+          href={getWhatsAppLink()}
+          target="_blank"
+          class="bg-green-500 hover:bg-green-600 text-white text-center px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all hover:-translate-y-1 flex justify-center items-center gap-2"
+        >
+          <span>WhatsApp</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.588-5.946 0-6.556 5.332-11.888 11.887-11.888 3.174 0 6.16 1.236 8.41 3.484 2.247 2.247 3.487 5.232 3.487 8.406 0 6.555-5.332 11.89-11.888 11.89-1.941 0-3.843-.48-5.544-1.391l-6.451 1.608zm10.635-19.587c-1.159 0-2.236.446-3.034 1.253-.806.808-1.254 1.884-1.254 3.041 0 1.054.39 2.048 1.067 2.871l.19.233-.677 2.469 2.53-.662.223.132c.767.457 1.648.699 2.557.699 1.159 0 2.246-.449 3.051-1.255.807-.809 1.253-1.885 1.253-3.042 0-2.366-1.922-4.29-4.288-4.29z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="relative hidden md:block">
+      <div class="absolute -inset-4 bg-white/10 rounded-full blur-3xl"></div>
+      <img
+        src="/ejecutiva.png"
+        alt="Erika Ejecutiva de Ventas"
+        class="relative w-full max-w-md mx-auto drop-shadow-2xl rounded-b-3xl transform hover:scale-105 transition-transform duration-500"
+      />
+    </div>
+  </div>
+</section>

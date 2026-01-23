@@ -1,0 +1,53 @@
+---
+import { Phone, Zap, ShieldCheck } from 'lucide-astro'
+---
+
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 text-center">
+    <h2 class="text-3xl font-black text-slate-900 mb-12">¿Por qué contratar con una Asesora?</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div
+        class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow"
+      >
+        <div
+          class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-700"
+        >
+          <Phone size={32} />
+        </div>
+        <h3 class="text-xl font-bold mb-3">Atención Directa</h3>
+        <p class="text-slate-600">
+          Te doy mi celular personal. Sin pasar por Call Centers ni máquinas.
+        </p>
+      </div>
+
+      <div
+        class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow"
+      >
+        <div
+          class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-700"
+        >
+          <Zap size={32} />
+        </div>
+        <h3 class="text-xl font-bold mb-3">Gestión Rápida</h3>
+        <p class="text-slate-600">
+          Contratación 100% digital en 15 minutos. Yo hago el trámite por ti.
+        </p>
+      </div>
+
+      <div
+        class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition-shadow"
+      >
+        <div
+          class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-blue-700"
+        >
+          <ShieldCheck size={32} />
+        </div>
+        <h3 class="text-xl font-bold mb-3">Respaldo Total</h3>
+        <p class="text-slate-600">
+          Trabajamos con las redes de rescate y clínicas más grandes de Chile.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

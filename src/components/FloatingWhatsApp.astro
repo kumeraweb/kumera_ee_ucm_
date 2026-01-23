@@ -1,0 +1,27 @@
+---
+import { CONTACT_INFO, getWhatsAppLink } from '../data/config'
+---
+
+<a
+  href={getWhatsAppLink()}
+  target="_blank"
+  rel="noopener noreferrer"
+  class="fixed bottom-6 right-6 z-50 flex items-center gap-3 group transition-all duration-300 hover:-translate-y-1"
+  aria-label="Contactar por WhatsApp"
+>
+  <div
+    class="bg-white px-4 py-2 rounded-full shadow-lg border border-slate-100 hidden md:block group-hover:scale-105 transition-transform"
+  >
+    <span class="text-slate-800 text-sm font-bold">👋 Hola, estoy para atenderte</span>
+  </div>
+
+  <div class="bg-[#25D366] p-4 rounded-full shadow-xl shadow-green-900/20 text-white relative">
+    <span class="absolute top-0 right-0 flex h-3 w-3">
+      <span
+        class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"
+      ></span>
+      <span class="relative inline-flex rounded-full h-3 w-3 bg-red-500 border-2 border-[#25D366]"
+      ></span>
+    </span>
+  </div>
+</a>
