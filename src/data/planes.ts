@@ -14,7 +14,7 @@ export const PLANES: PlanRescate[] = [
     nombre: 'Full Rescue Individual',
     precio: '0,59',
     unidad: 'UF / mes',
-    features: ['Rescate Emergencia 24/7', 'Atención Médica Telefónica', 'Sin límite de eventos'],
+    features: ['Rescate Emergencia 24/7', 'Atención Médica Telefónica', 'Sin límite de edad'],
     destacado: true,
     etiqueta: 'Más Vendido'
   },
