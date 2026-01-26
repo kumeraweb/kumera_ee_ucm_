@@ -29,18 +29,6 @@ export const PLANES: PlanRescate[] = [
       'Traslados programados'
     ],
     destacado: false,
-    etiqueta: 'Recomendado'
-  },
-  {
-    id: 'traslados',
-    nombre: 'Convenio Traslados',
-    precio: '85.000',
-    unidad: 'Pesos / evento',
-    features: [
-      'Traslados de alta complejidad',
-      'Equipamiento UTI móvil',
-      'Cobertura Inter-regiones'
-    ],
-    destacado: false
+    etiqueta: 'Ideal Adulto Mayor'
   }
 ]

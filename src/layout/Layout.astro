@@ -6,15 +6,16 @@ interface Props {
   title: string
 }
 
-const { title } = Astro.props
+Astro.props satisfies Props
+const pageTitle = 'Planes de Ambulancia y Rescate Médico | Gestión Autorizada'
 
 const schemaData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Erika - Asesoría en Planes de Rescate Médico',
+  name: 'Ejecutiva Autorizada - Asesoría en Planes de Rescate Médico',
   image: '/ejecutiva.png',
   description:
-    'Ejecutiva comercial independiente y autorizada para la venta, cotización y asesoría de planes de rescate médico móvil y ambulancias privadas en Chile. Intermediación de servicios para familias y empresas.',
+    'Ejecutiva comercial autorizada para la venta, cotización y asesoría de planes de rescate médico móvil y ambulancias privadas en Chile. Gestión de servicios para familias y empresas.',
   telephone: `+${CONTACT_INFO.phone}`,
   priceRange: '$$',
   areaServed: {
@@ -31,7 +32,11 @@ const schemaData = {
   provider: {
     '@type': 'Person',
     name: CONTACT_INFO.name,
-    jobTitle: 'Ejecutiva de Ventas Autorizada'
+    jobTitle: 'Ejecutiva Comercial Autorizada',
+    worksFor: {
+      '@type': 'Organization',
+      name: 'Empresa líder de rescate médico privado'
+    }
   }
 }
 ---
@@ -45,10 +50,10 @@ const schemaData = {
 
     <meta
       name="description"
-      content="Asesoría experta e independiente en planes de rescate médico. Cotiza con Erika tu plan de ambulancia privada. Gestión rápida y autorizada."
+      content="Asesoría para contratar tu plan de salud a domicilio. Atención preferencial para adultos mayores. Ejecutiva Autorizada a tu servicio."
     />
 
-    <title>{title}</title>
+    <title>{pageTitle}</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -77,11 +82,8 @@ const schemaData = {
     <footer class="bg-slate-900 text-white py-12 px-4 mt-20 text-center">
       <div class="max-w-4xl mx-auto">
         <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-          <strong>Aviso Legal:</strong> Este sitio web pertenece a una
-          <span class="text-white font-bold">Ejecutiva de Ventas Independiente</span> ({
-            CONTACT_INFO.name
-          }). La gestión de los servicios médicos y ambulancias es responsabilidad exclusiva de las
-          empresas proveedoras contratadas. No somos una central de urgencias médicas directa.
+          <strong>Aviso Legal:</strong> Sitio gestionado por Ejecutiva Autorizada. Servicio provisto
+          por empresa líder de rescate médico.
         </p>
         <p class="text-slate-500 text-xs">
           © {new Date().getFullYear()} Servicios de Rescate Móvil - Gestión Comercial.

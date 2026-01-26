@@ -1,73 +1,68 @@
 ---
-import { CONTACT_INFO, getWhatsAppLink } from '../data/config'
+import { CONTACT_INFO } from '../data/config'
 ---
 
-<section class="relative bg-blue-900 overflow-hidden">
-  <div class="absolute inset-0 z-0">
-    <!-- <img
-      src="/hero.png"
-      alt="Flota ambulancias"
-      class="w-full h-full object-cover object-center opacity-50"
-    /> -->
-
-    <div class="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-900/80 to-blue-900/20">
-    </div>
+<section class="relative overflow-visible bg-blue-950 text-white">
+  <div class="absolute inset-0">
+    <img
+      src="/ejecutiva.png"
+      alt=""
+      class="h-full w-full object-cover opacity-30"
+      aria-hidden="true"
+      loading="eager"
+    />
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-blue-950/90 to-blue-900/70"></div>
   </div>
 
-  <div
-    class="relative z-10 max-w-7xl mx-auto px-4 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center"
-  >
-    <div class="text-white space-y-6">
-      <div
-        class="inline-block bg-blue-800/80 backdrop-blur-sm border border-blue-400/30 px-4 py-1 rounded-full text-blue-100 text-sm font-bold uppercase tracking-wider mb-2"
-      >
-        Atención Inmediata
-      </div>
-
-      <h1 class="text-3xl md:text-4xl lg:text-5xl font-black leading-tight drop-shadow-lg">
-        Contrata hoy tu plan de <br />
-        <span class="text-blue-300">atención médica domiciliaria</span>
-      </h1>
-
-      <p class="text-xl text-blue-50 font-medium leading-relaxed max-w-lg drop-shadow-md">
-        Para tu familia o empresa, con respuesta profesional cuando lo necesites.
-      </p>
-
-      <p class="text-blue-100 leading-relaxed max-w-lg">
-        Soy <strong>{CONTACT_INFO.name}</strong>, tu ejecutiva UCM. Te ayudo a contratar el plan que
-        mejor se ajusta a tus necesidades, sin trámites ni esperas.
-      </p>
-
-      <ul class="mt-4 space-y-2 text-blue-100 font-medium">
-        <li>• Telemedicina inmediata</li>
-        <li>• Atención médica domiciliaria</li>
-        <li>• Rescate médico y traslado en ambulancia según evaluación</li>
-      </ul>
-
-      <div class="flex flex-col sm:flex-row gap-4 pt-4">
-        <a
-          href={`tel:${CONTACT_INFO.phone}`}
-          class="bg-red-600 hover:bg-red-700 text-white text-center px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all hover:-translate-y-1 hover:shadow-red-900/50"
+  <div class="relative max-w-7xl mx-auto px-4 pt-16 pb-12 md:pt-24 md:pb-28">
+    <div class="grid gap-8 md:gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
+      <div>
+        <div
+          class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white shadow-md"
         >
-          Llamar a tu ejecutiva Ahora
-        </a>
+          Ejecutiva Comercial Autorizada
+        </div>
+
+        <h1 class="mt-5 text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
+          Tu Salud y la de tus Padres Asegurada
+        </h1>
+
+        <p class="mt-4 text-lg md:text-xl font-medium text-blue-50 max-w-xl">
+          Ejecutiva Autorizada. Gestión directa sin call centers.
+        </p>
+
+        <p class="mt-3 text-blue-100 max-w-xl">
+          Servicio de Rescate Médico Privado con planes mensuales claros para familias y empresas.
+        </p>
+
+        <div class="mt-4 flex flex-wrap gap-2 text-xs font-bold uppercase tracking-widest text-blue-100">
+          <span class="rounded-full bg-white/10 px-3 py-1 shadow-sm">Adultos mayores</span>
+          <span class="rounded-full bg-white/10 px-3 py-1 shadow-sm">Familias</span>
+          <span class="rounded-full bg-white/10 px-3 py-1 shadow-sm">Empresas</span>
+          <span class="rounded-full bg-white/10 px-3 py-1 shadow-sm">
+            Cobertura Valparaíso y Metropolitana
+          </span>
+        </div>
+
         <a
-          href={getWhatsAppLink()}
-          target="_blank"
-          class="bg-blue-400 hover:bg-blue-300 text-white text-center px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition-all hover:-translate-y-1 flex justify-center items-center gap-2"
+          href="#planes"
+          class="mt-6 inline-flex w-full min-h-[56px] items-center justify-center rounded-3xl bg-red-600 px-6 text-base font-black uppercase tracking-wide text-white shadow-2xl shadow-red-700/30 transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-red-400 sticky bottom-4 z-40 md:static md:w-auto"
         >
-          <span>WhatsApp Directo</span>
+          Ver precios y planes 👇
         </a>
       </div>
-    </div>
 
-    <div class="relative hidden md:block">
-      <div class="absolute -inset-4 bg-white/10 rounded-full blur-3xl"></div>
-      <img
-        src="/ejecutiva.png"
-        alt="Erika Ejecutiva de Ventas"
-        class="relative w-full max-w-md mx-auto drop-shadow-2xl rounded-b-3xl transform hover:scale-105 transition-transform duration-500"
-      />
+      <div class="relative md:pl-6 md:-mr-6">
+        <div class="absolute -inset-6 rounded-3xl bg-white/10 shadow-2xl blur-sm"></div>
+        <div class="relative -mx-4 rounded-none bg-white/10 p-3 shadow-2xl md:mx-0 md:translate-y-6 md:rounded-3xl">
+          <img
+            src="/ejecutiva.png"
+            alt={`${CONTACT_INFO.name} Ejecutiva Comercial Autorizada`}
+            class="w-full rounded-none object-cover md:min-h-[440px] md:rounded-3xl"
+            loading="eager"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </section>

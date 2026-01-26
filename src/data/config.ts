@@ -1,11 +1,12 @@
 export const CONTACT_INFO = {
-  owner: 'Erika',
-  name: 'Tu ejecutiva de ventas',
-  title: 'Ejecutiva Autorizada',
+  owner: 'Ejecutiva Autorizada',
+  name: 'Ejecutiva Autorizada',
+  title: 'Ejecutiva Comercial Autorizada',
   phone: '56942874934',
+  phoneDisplay: '+56 9 4287 4934',
   whatsappMessage:
-    'Hola Erika, me interesa cotizar un plan de rescate médico. ¿Me puedes orientar?',
-  ctaText: 'Hablar con Erika'
+    'Hola, me interesa cotizar un plan de rescate médico. ¿Me puedes orientar?',
+  ctaText: 'Hablar con Ejecutiva Autorizada'
 }
 
 export const getWhatsAppLink = (message?: string) => {
