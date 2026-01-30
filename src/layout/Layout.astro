@@ -7,36 +7,22 @@ interface Props {
 }
 
 Astro.props satisfies Props
-const pageTitle = 'Planes de Ambulancia y Rescate Médico | Gestión Autorizada'
+const pageTitle = 'Gestion Autorizada de Planes | Asesoria Comercial'
 
 const schemaData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
-  name: 'Ejecutiva Autorizada - Asesoría en Planes de Rescate Médico',
-  image: '/ejecutiva.png',
-  description:
-    'Ejecutiva comercial autorizada para la venta, cotización y asesoría de planes de rescate médico móvil y ambulancias privadas en Chile. Gestión de servicios para familias y empresas.',
-  telephone: `+${CONTACT_INFO.phone}`,
-  priceRange: '$$',
+  name: 'Gestion Autorizada de Planes',
+  description: 'Asesoria comercial e intermediacion para la contratacion de planes. Informacion clara de condiciones y cobertura segun proveedor oficial.',
   areaServed: {
     '@type': 'Country',
-    name: 'Chile'
+    name: CONTACT_INFO.areaServed
   },
-  makesOffer: {
-    '@type': 'Offer',
-    itemOffered: {
-      '@type': 'Service',
-      name: 'Gestión y Contratación de Planes de Salud'
-    }
-  },
-  provider: {
-    '@type': 'Person',
-    name: CONTACT_INFO.name,
-    jobTitle: 'Ejecutiva Comercial Autorizada',
-    worksFor: {
-      '@type': 'Organization',
-      name: 'Empresa líder de rescate médico privado'
-    }
+  priceRange: CONTACT_INFO.priceRange,
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'sales',
+    telephone: `+${CONTACT_INFO.phone}`
   }
 }
 ---
@@ -50,7 +36,7 @@ const schemaData = {
 
     <meta
       name="description"
-      content="Asesoría para contratar tu plan de salud a domicilio. Atención preferencial para adultos mayores. Ejecutiva Autorizada a tu servicio."
+      content="Asesoria comercial e intermediacion para la contratacion de planes. Acompanamiento claro en condiciones y cobertura segun proveedor oficial."
     />
 
     <title>{pageTitle}</title>
@@ -81,12 +67,11 @@ const schemaData = {
 
     <footer class="bg-slate-900 text-white py-12 px-4 mt-20 text-center">
       <div class="max-w-4xl mx-auto">
-        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
-          <strong>Aviso Legal:</strong> Sitio gestionado por Ejecutiva Autorizada. Servicio provisto
-          por empresa líder de rescate médico.
+        <p class="text-slate-300 text-sm mb-4 leading-relaxed">
+          <strong>Aviso Legal:</strong> {CONTACT_INFO.legalDisclaimerLong}
         </p>
         <p class="text-slate-500 text-xs">
-          © {new Date().getFullYear()} Servicios de Rescate Móvil - Gestión Comercial.
+          © {new Date().getFullYear()} {CONTACT_INFO.brandTitle} - Asesoria Comercial.
         </p>
       </div>
     </footer>

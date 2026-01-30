@@ -1,12 +1,16 @@
 export const CONTACT_INFO = {
-  owner: 'Ejecutiva Autorizada',
-  name: 'Ejecutiva Autorizada',
-  title: 'Ejecutiva Comercial Autorizada',
+  brandTitle: 'Gestion Autorizada de Planes',
+  roleLabel: 'Ejecutiva Autorizada',
   phone: '56942874934',
   phoneDisplay: '+56 9 4287 4934',
-  whatsappMessage:
-    'Hola, me interesa cotizar un plan de rescate médico. ¿Me puedes orientar?',
-  ctaText: 'Hablar con Ejecutiva Autorizada'
+  whatsappMessage: 'Hola, quiero cotizar un plan y entender las condiciones.',
+  email: '',
+  areaServed: 'Chile',
+  priceRange: '$$',
+  legalDisclaimerShort:
+    'Sitio de asesoria comercial y gestion de contratacion. No presta servicios operativos ni reemplaza canales oficiales.',
+  legalDisclaimerLong:
+    'Este sitio es gestionado por una Ejecutiva Comercial Autorizada independiente. Su funcion es la intermediacion y venta de planes. No representa corporativamente a proveedores ni reemplaza canales oficiales.'
 }
 
 export const getWhatsAppLink = (message?: string) => {
