@@ -10,7 +10,7 @@ export const CONTACT_INFO = {
   legalDisclaimerShort:
     'Sitio de asesoria comercial y gestion de contratacion. No presta servicios operativos ni reemplaza canales oficiales.',
   legalDisclaimerLong:
-    'Este sitio es gestionado por una Ejecutiva Comercial Autorizada independiente. Su funcion es la intermediacion y venta de planes. No representa corporativamente a proveedores ni reemplaza canales oficiales.'
+    'Este sitio es gestionado por una Ejecutiva Comercial Autorizada. Su funcion es la intermediacion y venta de planes. No representa corporativamente a proveedores ni reemplaza canales oficiales.'
 }
 
 export const getWhatsAppLink = (message?: string) => {

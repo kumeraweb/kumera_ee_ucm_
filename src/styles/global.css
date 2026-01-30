@@ -1,144 +1,60 @@
 @import "tailwindcss";
 
-.plans-grid {
-  display: grid;
+/* Design System Tokens (premium insurance/fintech) */
+:root {
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+  --shadow-card: 0 16px 36px rgba(15, 23, 42, 0.1);
+  --accent: #1d4ed8;
+  --accent-ink: #0b1d4d;
 }
 
-.plan-card {
-  position: relative;
-  border-radius: 1.75rem;
-  background-color: #ffffff;
-  border: 2px solid #0b5ed7;
-  padding: 2rem;
-  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
-  color: #0f172a;
-}
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-3 text-sm font-semibold tracking-wide transition-all duration-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2;
+    min-height: 44px;
+  }
 
-.plan-card.blue {
-  background-color: #0b5ed7;
-  color: #ffffff;
-}
+  .btn-primary {
+    @apply bg-blue-600 text-white shadow-sm hover:bg-blue-700 focus-visible:outline-blue-200;
+  }
 
-.plan-card.blue .plan-title,
-.plan-card.blue .plan-subtitle,
-.plan-card.blue .plan-features li,
-.plan-card.blue .price-period {
-  color: #ffffff;
-}
+  .btn-secondary {
+    @apply border border-slate-300 bg-white text-slate-900 hover:border-slate-400 hover:text-slate-950 focus-visible:outline-slate-300;
+  }
 
-.plan-card.blue .old-price {
-  color: rgba(255, 255, 255, 0.7);
-}
+  .btn-ghost {
+    @apply text-blue-700 hover:text-blue-900;
+  }
 
-.plan-card.blue .plan-button {
-  background-color: #ffffff;
-  color: #0b5ed7;
-}
+  .card {
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
+    box-shadow: var(--shadow-soft);
+  }
 
-.plan-card--outlined {
-  background-color: #ffffff;
-  color: #0f172a;
-}
+  .card-strong {
+    @apply rounded-2xl border border-blue-100 bg-white;
+    box-shadow: var(--shadow-card);
+  }
 
-.plan-badge {
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #f43f5e;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.35rem 1rem;
-  border-radius: 999px;
-  box-shadow: 0 12px 26px rgba(244, 63, 94, 0.35);
-}
+  .badge {
+    @apply inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-blue-900;
+  }
 
-.plan-badge--dark {
-  background: #0b5ed7;
-  box-shadow: 0 12px 26px rgba(11, 94, 215, 0.3);
-}
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white;
+  }
 
-.plan-title {
-  font-size: 2rem;
-  font-weight: 900;
-  margin-bottom: 0.5rem;
-}
+  .section-title {
+    @apply text-slate-900 font-black;
+    font-size: clamp(1.6rem, 4vw, 2.4rem);
+  }
 
-.old-price {
-  font-size: 0.9rem;
-  font-weight: 700;
-  text-decoration: line-through;
-  color: #64748b;
-  margin-bottom: 0.25rem;
-}
-
-.price-row {
-  display: flex;
-  align-items: baseline;
-  gap: 0.35rem;
-  margin-bottom: 1rem;
-}
-
-.current-price {
-  font-size: 3rem;
-  font-weight: 800;
-}
-
-.price-period {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #334155;
-}
-
-.plan-subtitle {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #334155;
-  margin-bottom: 1.5rem;
-}
-
-.plan-features {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.75rem;
-  display: grid;
-  gap: 0.75rem;
-}
-
-.plan-features li {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1e293b;
-}
-
-.plan-button {
-  display: block;
-  width: 100%;
-  min-height: 48px;
-  border-radius: 999px;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: 800;
-  padding: 0.9rem 1rem;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.plan-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.2);
-}
-
-.plan-button--light {
-  background: #ffffff;
-  color: #0b5ed7;
-}
-
-.plan-button--dark {
-  background: #0b5ed7;
-  color: #ffffff;
+  .section-lede {
+    @apply text-slate-600;
+    font-size: clamp(1rem, 2.4vw, 1.125rem);
+  }
 }

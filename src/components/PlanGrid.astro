@@ -1,109 +1,85 @@
 ---
-import { CONTACT_INFO, getWhatsAppLink } from '../data/config'
+import { getWhatsAppLink } from '../data/config'
 ---
 
-<section id="planes" class="relative z-20 bg-slate-50 py-12 md:-mt-20 md:py-20">
+<section id="planes" class="bg-white py-14 md:py-20">
   <div class="max-w-7xl mx-auto px-4">
-    <div class="text-center mb-10">
-      <h2 class="text-3xl md:text-4xl font-black text-slate-900">Planes a tu medida</h2>
-      <p class="mt-3 text-lg text-slate-600">
+    <div class="text-center mb-10 md:mb-14">
+      <h2 class="section-title">Planes a tu medida</h2>
+      <p class="section-lede mt-3">
         Te orientamos para elegir el plan correcto segun tu perfil y condiciones contractuales.
       </p>
     </div>
 
-    <div class="plans-grid grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-      <article class="plan-card blue">
-        <div class="plan-badge">Oferta Web</div>
-        <h3 class="plan-title">PLAN FULL</h3>
-        <p class="old-price">Antes 0,90 UF</p>
-        <div class="price-row">
-          <span class="current-price">0,59 UF</span>
-          <span class="price-period">/mensual</span>
+    <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+      <article class="card-strong p-6 md:p-8">
+        <div class="badge mb-4">Oferta Web</div>
+        <h3 class="text-xl md:text-2xl font-black text-slate-900">PLAN FULL</h3>
+        <p class="text-sm font-semibold text-slate-500 mt-2 line-through">Antes 0,90 UF</p>
+        <div class="mt-3 flex items-end gap-2">
+          <span class="text-3xl md:text-4xl font-black text-slate-900">0,59 UF</span>
+          <span class="text-sm font-semibold text-slate-500">/mensual</span>
         </div>
-        <p class="plan-subtitle">Beneficios del plan y condiciones claras.</p>
-        <ul class="plan-features">
+        <p class="mt-4 text-slate-600">
+          Beneficios del plan y condiciones claras.
+        </p>
+        <ul class="mt-5 grid gap-3 text-sm text-slate-700">
           <li>Cobertura del plan segun edad y condiciones del proveedor oficial.</li>
           <li>Activacion y uso conforme a reglas contractuales.</li>
           <li>Servicios incluidos segun el plan contratado.</li>
           <li>Detalle transparente de copagos y exclusiones.</li>
           <li>Orientacion comercial durante la contratacion.</li>
         </ul>
-        <a href={getWhatsAppLink()} target="_blank" class="plan-button plan-button--light">
-          SOLICITAR PLAN FULL
+        <a href={getWhatsAppLink()} target="_blank" class="btn btn-primary w-full mt-6">
+          Solicitar plan full
         </a>
       </article>
 
-      <article class="plan-card plan-card--outlined">
-        <div class="plan-badge plan-badge--dark">Ideal Adulto Mayor</div>
-        <h3 class="plan-title">PLAN SENIOR</h3>
-        <p class="old-price">Antes 1,60 UF</p>
-        <div class="price-row">
-          <span class="current-price">1,2 UF</span>
-          <span class="price-period">/mensual</span>
+      <article class="card p-6 md:p-8">
+        <div class="badge mb-4">Ideal Adulto Mayor</div>
+        <h3 class="text-xl md:text-2xl font-black text-slate-900">PLAN SENIOR</h3>
+        <p class="text-sm font-semibold text-slate-500 mt-2 line-through">Antes 1,60 UF</p>
+        <div class="mt-3 flex items-end gap-2">
+          <span class="text-3xl md:text-4xl font-black text-slate-900">1,2 UF</span>
+          <span class="text-sm font-semibold text-slate-500">/mensual</span>
         </div>
-        <p class="plan-subtitle">Condiciones preferentes para perfiles senior.</p>
-        <ul class="plan-features">
+        <p class="mt-4 text-slate-600">
+          Condiciones preferentes para perfiles senior.
+        </p>
+        <ul class="mt-5 grid gap-3 text-sm text-slate-700">
           <li>Condiciones contractuales definidas por proveedor oficial.</li>
           <li>Cobertura del plan con reglas de uso claras.</li>
           <li>Beneficios detallados en la propuesta comercial.</li>
           <li>Transparencia en limites, copagos y exclusiones.</li>
           <li>Gestion de contratacion guiada por ejecutiva autorizada.</li>
         </ul>
-        <a href={getWhatsAppLink()} target="_blank" class="plan-button plan-button--dark">
-          SOLICITAR PLAN SENIOR
+        <a href={getWhatsAppLink()} target="_blank" class="btn btn-secondary w-full mt-6">
+          Solicitar plan senior
         </a>
       </article>
     </div>
 
-    <div class="mt-12 grid gap-6 md:grid-cols-3">
-      <div class="rounded-3xl border border-slate-100 bg-white p-6 shadow-lg">
-        <p class="text-sm font-bold uppercase tracking-widest text-blue-900">Mini FAQ</p>
-        <h3 class="mt-2 text-xl font-black text-slate-900">¿Es para adultos mayores?</h3>
-        <p class="mt-2 text-slate-600">
+    <div class="mt-12 grid gap-5 md:grid-cols-3">
+      <div class="card p-5">
+        <p class="text-[11px] font-semibold uppercase tracking-widest text-blue-900">Mini FAQ</p>
+        <h3 class="mt-2 text-lg font-bold text-slate-900">¿Es para adultos mayores?</h3>
+        <p class="mt-2 text-sm text-slate-600">
           Si. Hay planes pensados para personas mayores y sus familias.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-slate-100 bg-white p-6 shadow-lg">
-        <p class="text-sm font-bold uppercase tracking-widest text-blue-900">Mini FAQ</p>
-        <h3 class="mt-2 text-xl font-black text-slate-900">¿Que necesito para contratar?</h3>
-        <p class="mt-2 text-slate-600">
+      <div class="card p-5">
+        <p class="text-[11px] font-semibold uppercase tracking-widest text-blue-900">Mini FAQ</p>
+        <h3 class="mt-2 text-lg font-bold text-slate-900">¿Que necesito para contratar?</h3>
+        <p class="mt-2 text-sm text-slate-600">
           Solo datos basicos. La ejecutiva autorizada guia todo el proceso.
         </p>
       </div>
 
-      <div class="rounded-3xl border border-slate-100 bg-white p-6 shadow-lg">
-        <p class="text-sm font-bold uppercase tracking-widest text-blue-900">Mini FAQ</p>
-        <h3 class="mt-2 text-xl font-black text-slate-900">¿Cuanto demora?</h3>
-        <p class="mt-2 text-slate-600">Depende de la validacion comercial y datos requeridos.</p>
-      </div>
-    </div>
-
-    <div class="mt-12">
-      <div class="rounded-3xl bg-blue-900 px-6 py-8 text-white shadow-2xl md:px-10">
-        <div class="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div>
-            <p class="text-sm font-bold uppercase tracking-widest text-blue-100">Asesoria comercial</p>
-            <h3 class="mt-2 text-2xl md:text-3xl font-black">¿Quieres cotizar hoy?</h3>
-            <p class="mt-2 text-blue-100">Te orientamos en condiciones y pasos de contratacion.</p>
-          </div>
-
-          <div class="grid gap-3 w-full md:w-auto">
-            <a
-              href={`tel:${CONTACT_INFO.phone}`}
-              class="w-full min-h-[48px] rounded-3xl bg-white px-6 py-3 text-center text-base font-bold text-blue-900 shadow-lg shadow-blue-900/30"
-            >
-              Consulta comercial
-            </a>
-            <a
-              href={getWhatsAppLink()}
-              target="_blank"
-              class="w-full min-h-[48px] rounded-3xl bg-[#25D366] px-6 py-3 text-center text-base font-bold text-white shadow-lg shadow-green-900/30"
-            >
-              WhatsApp comercial
-            </a>
-          </div>
-        </div>
+      <div class="card p-5">
+        <p class="text-[11px] font-semibold uppercase tracking-widest text-blue-900">Mini FAQ</p>
+        <h3 class="mt-2 text-lg font-bold text-slate-900">¿Cuanto demora?</h3>
+        <p class="mt-2 text-sm text-slate-600">Depende de la validacion comercial y datos requeridos.</p>
       </div>
     </div>
   </div>

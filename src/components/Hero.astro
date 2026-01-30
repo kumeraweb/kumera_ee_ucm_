@@ -1,63 +1,55 @@
 ---
-import { CONTACT_INFO } from '../data/config'
+import { CONTACT_INFO, getWhatsAppLink } from '../data/config'
 ---
 
-<section class="relative overflow-hidden bg-blue-950 text-white">
+<section class="relative overflow-hidden bg-slate-950 text-white">
   <div class="absolute inset-0">
-    <img
-      src="/hero.png"
-      alt=""
-      class="h-full w-full object-cover opacity-30"
-      aria-hidden="true"
-      loading="eager"
-    />
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-950 via-blue-950/90 to-blue-900/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-slate-950 via-slate-950/90 to-slate-900"></div>
   </div>
 
-  <div class="relative max-w-7xl mx-auto px-4 pt-16 pb-12 md:pt-24 md:pb-28">
-    <div class="grid gap-8 md:gap-12 md:grid-cols-[1.1fr_0.9fr] items-center">
-      <div>
-        <div
-          class="inline-flex items-center gap-2 rounded-full bg-white/10 px-4 py-2 text-xs font-bold uppercase tracking-widest text-white shadow-md"
-        >
+  <div class="relative max-w-7xl mx-auto px-4 pt-14 pb-12 md:pt-20 md:pb-20">
+    <div class="grid gap-10 md:grid-cols-[1.1fr_0.9fr] items-center">
+      <div class="space-y-5">
+        <div class="eyebrow">
           {CONTACT_INFO.roleLabel}
         </div>
 
-        <h1 class="mt-5 text-4xl md:text-5xl lg:text-6xl font-black leading-tight">
+        <h1 class="font-black text-white leading-[1.05] text-[clamp(2rem,6vw,3.4rem)]">
           Tranquilidad y contratacion informada para tu plan
         </h1>
 
-        <p class="mt-4 text-lg md:text-xl font-medium text-blue-50 max-w-xl">
+        <p class="text-blue-50/90 text-[clamp(1rem,2.6vw,1.25rem)] max-w-xl">
           Asesoria comercial clara y gestion de contratacion con orientacion paso a paso.
         </p>
 
-        <p class="mt-4 rounded-2xl border border-white/20 bg-white/10 p-4 text-sm text-blue-50 max-w-xl">
+        <p class="rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-xs md:text-sm text-blue-50/90 max-w-xl">
           Este sitio es exclusivamente para asesoria y contratacion de planes. No prestamos servicios operativos ni reemplazamos canales oficiales.
         </p>
 
-        <div class="mt-4 flex flex-wrap gap-2 text-xs font-bold uppercase tracking-widest text-blue-100">
-          <span class="rounded-full bg-white/10 px-3 py-1 shadow-sm">Familias</span>
-          <span class="rounded-full bg-white/10 px-3 py-1 shadow-sm">Adultos mayores</span>
-          <span class="rounded-full bg-white/10 px-3 py-1 shadow-sm">Empresas</span>
+        <div class="flex flex-wrap gap-2">
+          <span class="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white/90">Familias</span>
+          <span class="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white/90">Adultos mayores</span>
+          <span class="rounded-full border border-white/15 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white/90">Empresas</span>
         </div>
 
-        <a
-          href="#planes"
-          class="mt-6 inline-flex w-full min-h-[56px] items-center justify-center rounded-3xl bg-white text-blue-900 px-6 text-base font-black uppercase tracking-wide shadow-2xl shadow-blue-900/30 transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white md:static md:w-auto"
-        >
-          Ver planes y condiciones
-        </a>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
+          <a href="#planes" class="btn btn-primary w-full sm:w-auto">Ver planes y condiciones</a>
+          <a href={getWhatsAppLink()} target="_blank" class="btn btn-secondary w-full sm:w-auto">
+            WhatsApp comercial
+          </a>
+        </div>
       </div>
 
-      <div class="relative md:pl-6 md:-mr-6">
-        <div class="absolute -inset-6 rounded-3xl bg-white/10 shadow-2xl blur-sm"></div>
-        <div class="relative rounded-none bg-white/10 p-3 shadow-2xl md:mx-0 md:translate-y-6 md:rounded-3xl">
-          <img
-            src="/ejecutiva.png"
-            alt={`${CONTACT_INFO.roleLabel} - asesoria comercial`}
-            class="w-full rounded-none object-cover md:min-h-[440px] md:rounded-3xl"
-            loading="eager"
-          />
+      <div class="relative">
+        <div class="card-strong overflow-hidden">
+          <div class="aspect-[4/3] md:aspect-[5/4]">
+            <img
+              src="/ejecutiva.png"
+              alt={`${CONTACT_INFO.roleLabel} - asesoria comercial`}
+              class="h-full w-full object-cover"
+              loading="eager"
+            />
+          </div>
         </div>
       </div>
     </div>
