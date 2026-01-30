@@ -1,16 +1,16 @@
 export const CONTACT_INFO = {
-  brandTitle: 'Gestion Autorizada de Planes',
-  roleLabel: 'Ejecutiva Autorizada',
+  brandTitle: 'Gestión de Planes de Salud',
+  roleLabel: 'Ejecutiva Comercial',
   phone: '56942874934',
   phoneDisplay: '+56 9 4287 4934',
-  whatsappMessage: 'Hola, quiero cotizar un plan y entender las condiciones.',
+  whatsappMessage: 'Hola, quiero cotizar un plan y conocer las condiciones de contratación.',
   email: '',
   areaServed: 'Chile',
   priceRange: '$$',
   legalDisclaimerShort:
-    'Sitio de asesoría comercial y gestión de contratación. La prestación es realizada por proveedores externos. No presta servicios operativos ni reemplaza canales oficiales.',
+    'Sitio de asesoría comercial y gestión de contratación. No presta servicios operativos ni reemplaza canales oficiales.',
   legalDisclaimerLong:
-    'Este sitio es gestionado por una Ejecutiva Comercial Autorizada. Su función es la intermediación y venta de planes. La prestación es realizada por proveedores externos. No representa corporativamente a proveedores ni reemplaza canales oficiales.'
+    'Servicio de intermediación y gestión comercial. No somos una central médica operativa ni reemplazamos a los canales oficiales de urgencia (131). La prestación del servicio es responsabilidad exclusiva de la empresa proveedora.'
 }
 
 export const getWhatsAppLink = (message?: string) => {
