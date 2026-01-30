@@ -8,9 +8,9 @@ export const CONTACT_INFO = {
   areaServed: 'Chile',
   priceRange: '$$',
   legalDisclaimerShort:
-    'Sitio de asesoria comercial y gestion de contratacion. No presta servicios operativos ni reemplaza canales oficiales.',
+    'Sitio de asesoría comercial y gestión de contratación. La prestación es realizada por proveedores externos. No presta servicios operativos ni reemplaza canales oficiales.',
   legalDisclaimerLong:
-    'Este sitio es gestionado por una Ejecutiva Comercial Autorizada. Su funcion es la intermediacion y venta de planes. No representa corporativamente a proveedores ni reemplaza canales oficiales.'
+    'Este sitio es gestionado por una Ejecutiva Comercial Autorizada. Su función es la intermediación y venta de planes. La prestación es realizada por proveedores externos. No representa corporativamente a proveedores ni reemplaza canales oficiales.'
 }
 
 export const getWhatsAppLink = (message?: string) => {

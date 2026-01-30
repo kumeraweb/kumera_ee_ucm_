@@ -5,10 +5,14 @@ import { getWhatsAppLink } from '../data/config'
 <section id="planes" class="bg-white py-14 md:py-20">
   <div class="max-w-7xl mx-auto px-4">
     <div class="text-center mb-10 md:mb-14">
-      <h2 class="section-title">Planes a tu medida</h2>
+      <h2 class="section-title">Planes con claridad de condiciones</h2>
       <p class="section-lede mt-3">
-        Te orientamos para elegir el plan correcto segun tu perfil y condiciones contractuales.
+        Planes que contemplan respaldo en traslados y asistencia, con condiciones definidas por cada proveedor.
       </p>
+      <div class="mt-4 text-sm text-slate-600">
+        <p>Planes que incluyen ambulancias privadas.</p>
+        <p>Planes con acceso a unidades médicas especializadas.</p>
+      </div>
     </div>
 
     <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
@@ -21,18 +25,15 @@ import { getWhatsAppLink } from '../data/config'
           <span class="text-sm font-semibold text-slate-500">/mensual</span>
         </div>
         <p class="mt-4 text-slate-600">
-          Beneficios del plan y condiciones claras.
+          Planes utilizados en casos de urgencia médica, según reglas contractuales.
         </p>
         <ul class="mt-5 grid gap-3 text-sm text-slate-700">
-          <li>Cobertura del plan segun edad y condiciones del proveedor oficial.</li>
-          <li>Activacion y uso conforme a reglas contractuales.</li>
-          <li>Servicios incluidos segun el plan contratado.</li>
+          <li>Condiciones del plan según edad y perfil del titular.</li>
+          <li>Activación y uso conforme a reglas del proveedor.</li>
+          <li>Servicios incluidos según el plan contratado.</li>
           <li>Detalle transparente de copagos y exclusiones.</li>
-          <li>Orientacion comercial durante la contratacion.</li>
+          <li>Asesoría comercial durante la contratación.</li>
         </ul>
-        <a href={getWhatsAppLink()} target="_blank" class="btn btn-primary w-full mt-6">
-          Solicitar plan full
-        </a>
       </article>
 
       <article class="card p-6 md:p-8">
@@ -44,19 +45,25 @@ import { getWhatsAppLink } from '../data/config'
           <span class="text-sm font-semibold text-slate-500">/mensual</span>
         </div>
         <p class="mt-4 text-slate-600">
-          Condiciones preferentes para perfiles senior.
+          Condiciones preferentes para perfiles senior y sus familias.
         </p>
         <ul class="mt-5 grid gap-3 text-sm text-slate-700">
-          <li>Condiciones contractuales definidas por proveedor oficial.</li>
-          <li>Cobertura del plan con reglas de uso claras.</li>
+          <li>Condiciones contractuales definidas por cada proveedor.</li>
+          <li>Reglas de uso claras para el plan contratado.</li>
           <li>Beneficios detallados en la propuesta comercial.</li>
-          <li>Transparencia en limites, copagos y exclusiones.</li>
-          <li>Gestion de contratacion guiada por ejecutiva autorizada.</li>
+          <li>Transparencia en límites, copagos y exclusiones.</li>
+          <li>Gestión de contratación guiada por asesora comercial.</li>
         </ul>
-        <a href={getWhatsAppLink()} target="_blank" class="btn btn-secondary w-full mt-6">
-          Solicitar plan senior
-        </a>
       </article>
+    </div>
+
+    <div class="mt-10 text-center">
+      <p class="text-sm text-slate-600">
+        La prestación es realizada por proveedores externos. Revisamos condiciones y te acompañamos en la contratación.
+      </p>
+      <a href={getWhatsAppLink()} target="_blank" class="btn btn-primary w-full mt-6 md:w-auto">
+        Solicitar información comercial
+      </a>
     </div>
 
     <div class="mt-12 grid gap-5 md:grid-cols-3">
@@ -64,22 +71,22 @@ import { getWhatsAppLink } from '../data/config'
         <p class="text-[11px] font-semibold uppercase tracking-widest text-blue-900">Mini FAQ</p>
         <h3 class="mt-2 text-lg font-bold text-slate-900">¿Es para adultos mayores?</h3>
         <p class="mt-2 text-sm text-slate-600">
-          Si. Hay planes pensados para personas mayores y sus familias.
+          Sí. Hay planes pensados para personas mayores y sus familias.
         </p>
       </div>
 
       <div class="card p-5">
         <p class="text-[11px] font-semibold uppercase tracking-widest text-blue-900">Mini FAQ</p>
-        <h3 class="mt-2 text-lg font-bold text-slate-900">¿Que necesito para contratar?</h3>
+        <h3 class="mt-2 text-lg font-bold text-slate-900">¿Qué necesito para contratar?</h3>
         <p class="mt-2 text-sm text-slate-600">
-          Solo datos basicos. La ejecutiva autorizada guia todo el proceso.
+          Solo datos básicos. La asesora comercial guía todo el proceso.
         </p>
       </div>
 
       <div class="card p-5">
         <p class="text-[11px] font-semibold uppercase tracking-widest text-blue-900">Mini FAQ</p>
-        <h3 class="mt-2 text-lg font-bold text-slate-900">¿Cuanto demora?</h3>
-        <p class="mt-2 text-sm text-slate-600">Depende de la validacion comercial y datos requeridos.</p>
+        <h3 class="mt-2 text-lg font-bold text-slate-900">¿Cuánto demora?</h3>
+        <p class="mt-2 text-sm text-slate-600">Depende de la validación comercial y datos requeridos.</p>
       </div>
     </div>
   </div>

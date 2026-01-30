@@ -15,15 +15,19 @@ import { CONTACT_INFO, getWhatsAppLink } from '../data/config'
         </div>
 
         <h1 class="font-black text-white leading-[1.05] text-[clamp(2rem,6vw,3.4rem)]">
-          Tranquilidad y contratacion informada para tu plan
+          Contratación de planes de asistencia y rescate médico privado
         </h1>
 
         <p class="text-blue-50/90 text-[clamp(1rem,2.6vw,1.25rem)] max-w-xl">
-          Asesoria comercial clara y gestion de contratacion con orientacion paso a paso.
+          Asesoría comercial para contratar planes que incluyen ambulancias privadas y planes con acceso a unidades médicas especializadas, según condiciones del proveedor.
+        </p>
+
+        <p class="text-blue-50/90 text-sm md:text-base max-w-xl">
+          Planes utilizados en casos de urgencia médica, bajo reglas contractuales del proveedor.
         </p>
 
         <p class="rounded-2xl border border-white/15 bg-white/10 px-4 py-3 text-xs md:text-sm text-blue-50/90 max-w-xl">
-          Este sitio es exclusivamente para asesoria y contratacion de planes. No prestamos servicios operativos ni reemplazamos canales oficiales.
+          Este sitio es exclusivamente para asesoría y contratación de planes. La prestación es realizada por proveedores externos. No prestamos servicios operativos ni reemplazamos canales oficiales.
         </p>
 
         <div class="flex flex-wrap gap-2">
@@ -33,23 +37,20 @@ import { CONTACT_INFO, getWhatsAppLink } from '../data/config'
         </div>
 
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
-          <a href="#planes" class="btn btn-primary w-full sm:w-auto">Ver planes y condiciones</a>
-          <a href={getWhatsAppLink()} target="_blank" class="btn btn-secondary w-full sm:w-auto">
-            WhatsApp comercial
+          <a href={getWhatsAppLink()} target="_blank" class="btn btn-primary w-full sm:w-auto">
+            Solicitar información comercial
           </a>
         </div>
       </div>
 
       <div class="relative">
         <div class="card-strong overflow-hidden">
-          <div class="aspect-[4/3] md:aspect-[5/4]">
-            <img
-              src="/ejecutiva.png"
-              alt={`${CONTACT_INFO.roleLabel} - asesoria comercial`}
-              class="h-full w-full object-cover"
-              loading="eager"
-            />
-          </div>
+          <img
+            src="/ejecutiva.png"
+            alt="Imagen referencial de planes de asistencia y rescate médico privado"
+            class="w-full h-auto"
+            loading="eager"
+          />
         </div>
       </div>
     </div>

@@ -7,13 +7,13 @@ interface Props {
 }
 
 Astro.props satisfies Props
-const pageTitle = 'Gestion Autorizada de Planes | Asesoria Comercial'
+const pageTitle = 'Gestion Autorizada de Planes | Asesoría Comercial'
 
 const schemaData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'Gestion Autorizada de Planes',
-  description: 'Asesoria comercial e intermediacion para la contratacion de planes. Informacion clara de condiciones y cobertura segun proveedor oficial.',
+  description: 'Asesoría comercial para contratar planes. Información clara de condiciones y cobertura según proveedor externo.',
   areaServed: {
     '@type': 'Country',
     name: CONTACT_INFO.areaServed
@@ -36,7 +36,7 @@ const schemaData = {
 
     <meta
       name="description"
-      content="Asesoria comercial e intermediacion para la contratacion de planes. Acompanamiento claro en condiciones y cobertura segun proveedor oficial."
+      content="Asesoría comercial para contratar planes de asistencia y rescate médico privado. Información clara de condiciones según proveedores externos."
     />
 
     <title>{pageTitle}</title>
@@ -71,7 +71,7 @@ const schemaData = {
           <strong>Aviso Legal:</strong> {CONTACT_INFO.legalDisclaimerLong}
         </p>
         <p class="text-slate-500 text-xs">
-          © {new Date().getFullYear()} {CONTACT_INFO.brandTitle} - Asesoria Comercial.
+          © {new Date().getFullYear()} {CONTACT_INFO.brandTitle} - Asesoría Comercial.
         </p>
       </div>
     </footer>
