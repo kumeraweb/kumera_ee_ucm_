@@ -2,17 +2,25 @@
 import Layout from '../layout/Layout.astro'
 import Header from '../components/Header.astro'
 import Hero from '../components/Hero.astro'
+import TrustStrip from '../components/TrustStrip.astro'
+import HowItWorks from '../components/HowItWorks.astro'
 import ValueProposition from '../components/ValueProposition.astro'
 import PlanGrid from '../components/PlanGrid.astro'
 import Gallery from '../components/Gallery.astro'
+import FAQ from '../components/FAQ.astro'
+import ContactPanel from '../components/ContactPanel.astro'
 ---
 
 <Layout title="Gestión de Planes de Salud">
   <Header />
   <main class="space-y-14 md:space-y-24">
     <Hero />
+    <TrustStrip />
+    <HowItWorks />
     <ValueProposition />
     <PlanGrid />
     <Gallery />
+    <FAQ />
+    <ContactPanel />
   </main>
 </Layout>
