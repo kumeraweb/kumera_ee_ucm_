@@ -1,37 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Portal de planes">
   <defs>
     <style>
-      .ambulance-body { fill: #DC2626; }
-      .ambulance-window { fill: #93C5FD; }
-      .ambulance-detail { fill: #1F2937; }
-      .medical-cross { fill: #FFFFFF; }
+      .bg { fill: #2563EB; }
+      .fg { fill: #FFFFFF; }
+      .accent { fill: #DBEAFE; }
       @media (prefers-color-scheme: dark) {
-        .ambulance-body { fill: #EF4444; }
-        .ambulance-window { fill: #60A5FA; }
+        .bg { fill: #1D4ED8; }
+        .accent { fill: #93C5FD; }
       }
     </style>
   </defs>
-  
-  <!-- Ambulance body -->
-  <rect class="ambulance-body" x="16" y="50" width="96" height="48" rx="8"/>
-  
-  <!-- Ambulance cabin -->
-  <rect class="ambulance-body" x="16" y="30" width="32" height="20" rx="4"/>
-  
-  <!-- Cabin window -->
-  <rect class="ambulance-window" x="20" y="34" width="12" height="12" rx="2"/>
-  <rect class="ambulance-window" x="36" y="34" width="8" height="12" rx="2"/>
-  
-  <!-- Side window -->
-  <rect class="ambulance-window" x="56" y="54" width="14" height="18" rx="2"/>
-  
-  <!-- Wheels -->
-  <circle class="ambulance-detail" cx="36" cy="100" r="6"/>
-  <circle class="ambulance-detail" cx="92" cy="100" r="6"/>
-  
-  <!-- Medical cross on side -->
-  <g class="medical-cross">
-    <rect x="74" y="62" width="4" height="16"/>
-    <rect x="70" y="66" width="12" height="4"/>
-  </g>
+  <circle class="bg" cx="64" cy="64" r="56"/>
+  <path class="accent" d="M36 48h56a6 6 0 0 1 6 6v30a6 6 0 0 1-6 6H52l-16 12V54a6 6 0 0 1 6-6z"/>
+  <rect class="fg" x="52" y="60" width="36" height="6" rx="3"/>
+  <rect class="fg" x="52" y="72" width="28" height="6" rx="3"/>
 </svg>

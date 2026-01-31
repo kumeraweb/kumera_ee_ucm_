@@ -8,13 +8,14 @@ interface Props {
 }
 
 Astro.props satisfies Props
-const pageTitle = 'Gestión de Planes de Rescate | Asesoría Autorizada'
+const pageTitle = 'Gestión de Planes de Rescate | Asesoría Comercial'
 
 const schemaData = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: 'Gestión Comercial de Planes de Salud',
-  description: 'Asesoría comercial para la contratación e intermediación de planes de rescate médico móvil.',
+  description:
+    'Asesoría comercial para la contratación e intermediación de planes de rescate médico móvil, prestados por proveedores externos.',
   areaServed: {
     '@type': 'Country',
     name: CONTACT_INFO.areaServed

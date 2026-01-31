@@ -14,7 +14,11 @@ export const PLANES: PlanRescate[] = [
     nombre: 'Full Rescue Individual',
     precio: '0,59',
     unidad: 'UF / mes',
-    features: ['Rescate Emergencia 24/7', 'Atención Médica Telefónica', 'Sin límite de edad'],
+    features: [
+      'Cobertura de rescate de urgencia (según proveedor)',
+      'Orientación médica telefónica (según proveedor)',
+      'Sin límite de edad (según plan)'
+    ],
     destacado: true,
     etiqueta: 'Más Vendido'
   },
@@ -25,8 +29,8 @@ export const PLANES: PlanRescate[] = [
     unidad: 'UF / mes',
     features: [
       'Especial para mayores de 75 años',
-      'Copago $0 en centros médicos',
-      'Traslados programados'
+      'Copago $0 en centros médicos (según plan)',
+      'Traslados programados (según plan)'
     ],
     destacado: false,
     etiqueta: 'Ideal Adulto Mayor'
