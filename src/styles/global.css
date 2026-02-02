@@ -44,6 +44,10 @@
     @apply inline-flex items-center rounded-full border border-red-100 bg-red-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-red-800;
   }
 
+  .badge-featured {
+    @apply border-amber-200 bg-amber-50 text-amber-900;
+  }
+
   .eyebrow {
     @apply inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-white;
   }

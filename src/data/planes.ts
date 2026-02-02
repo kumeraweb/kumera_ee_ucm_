@@ -21,7 +21,7 @@ export const PLANES: PlanRescate[] = [
       'Atención Programada de Urgencias Médicas.',
       'Orientación de Salud Telefónica.'
     ],
-    destacado: true,
+    destacado: false,
     etiqueta: 'FULL RESCUE'
   },
   {
@@ -35,7 +35,7 @@ export const PLANES: PlanRescate[] = [
       'Asistencia de salud COPAGO $0 en Centros Médicos.',
       'Hasta 25% de descuento en Servicios de Salud a Domicilio.'
     ],
-    destacado: false,
+    destacado: true,
     etiqueta: 'SENIOR'
   }
 ]

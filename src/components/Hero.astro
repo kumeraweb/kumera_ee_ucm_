@@ -59,14 +59,27 @@ import { PLANES } from '../data/planes'
             {
               PLANES.map((plan) => (
                 <article class="card-strong p-4">
-                  <p class="text-[11px] font-semibold uppercase tracking-widest text-blue-700">
-                    {plan.etiqueta}
-                  </p>
+                  {(plan.etiqueta || plan.destacado) && (
+                    <div class="flex flex-wrap gap-2">
+                      {plan.etiqueta && (
+                        <span class="badge bg-blue-50 text-blue-800 border-blue-100">
+                          {plan.etiqueta}
+                        </span>
+                      )}
+                      {plan.destacado && <span class="badge badge-featured">Más contratado</span>}
+                    </div>
+                  )}
                   <h3 class="mt-2 text-sm font-black text-slate-900">{plan.nombre}</h3>
                   <p class="mt-2 text-xs text-slate-600">{plan.textoPrincipal}</p>
                   <p class="mt-2 text-xs font-semibold text-slate-700">
                     {plan.precio} {plan.unidad}
                   </p>
+                  <a
+                    href={`#plan-${plan.id}`}
+                    class="btn btn-secondary mt-3 w-full px-3 py-2 text-xs"
+                  >
+                    Ver detalle
+                  </a>
                 </article>
               ))
             }

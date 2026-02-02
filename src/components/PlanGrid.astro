@@ -42,10 +42,15 @@ import { PLANES } from '../data/planes'
     <div class="grid gap-5 max-w-5xl mx-auto">
       {
         PLANES.map((plan) => (
-          <article class="card-strong p-5 md:p-6">
+          <article id={`plan-${plan.id}`} class="card-strong p-5 md:p-6">
             <div class="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div>
-                {plan.etiqueta && <div class="badge mb-3">{plan.etiqueta}</div>}
+                {(plan.etiqueta || plan.destacado) && (
+                  <div class="mb-3 flex flex-wrap gap-2">
+                    {plan.etiqueta && <div class="badge">{plan.etiqueta}</div>}
+                    {plan.destacado && <div class="badge badge-featured">Más contratado</div>}
+                  </div>
+                )}
                 <h3 class="text-lg md:text-xl font-black text-slate-900">{plan.nombre}</h3>
                 <p class="mt-2 text-sm text-slate-600">{plan.textoPrincipal}</p>
                 <ul class="mt-3 grid gap-2 text-sm text-slate-600">
