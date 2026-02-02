@@ -3,6 +3,7 @@ export interface PlanRescate {
   nombre: string
   precio: string
   unidad: string
+  textoPrincipal: string
   features: string[]
   destacado: boolean
   etiqueta?: string
@@ -11,28 +12,30 @@ export interface PlanRescate {
 export const PLANES: PlanRescate[] = [
   {
     id: 'full-rescue',
-    nombre: 'Full Rescue Individual',
+    nombre: 'FULL RESCUE',
     precio: '0,59',
-    unidad: 'UF / mes',
+    unidad: 'UF',
+    textoPrincipal: 'Emergencias y Urgencias Médicas.',
     features: [
-      'Cobertura de rescate de urgencia (según proveedor)',
-      'Orientación médica telefónica (según proveedor)',
-      'Sin límite de edad (según plan)'
+      'Rescate de Emergencias Médicas.',
+      'Atención Programada de Urgencias Médicas.',
+      'Orientación de Salud Telefónica.'
     ],
     destacado: true,
-    etiqueta: 'Más Vendido'
+    etiqueta: 'FULL RESCUE'
   },
   {
     id: 'senior',
-    nombre: 'Protección Senior',
+    nombre: 'SENIOR',
     precio: '1,0',
-    unidad: 'UF / mes',
+    unidad: 'UF',
+    textoPrincipal: 'Protección para adultos desde 75 años.',
     features: [
-      'Especial para mayores de 75 años',
-      'Copago $0 en centros médicos (según plan)',
-      'Traslados programados (según plan)'
+      'Rescate ante Emergencias con Riesgo Vital y/o Urgencias Médicas.',
+      'Asistencia de salud COPAGO $0 en Centros Médicos.',
+      'Hasta 25% de descuento en Servicios de Salud a Domicilio.'
     ],
     destacado: false,
-    etiqueta: 'Ideal Adulto Mayor'
+    etiqueta: 'SENIOR'
   }
 ]

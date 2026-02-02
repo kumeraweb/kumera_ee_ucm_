@@ -8,8 +8,8 @@
   --radius-xl: 28px;
   --shadow-soft: 0 12px 30px rgba(15, 23, 42, 0.08);
   --shadow-card: 0 18px 40px rgba(15, 23, 42, 0.12);
-  --accent: #1d4ed8;
-  --accent-ink: #0b1d4d;
+  --accent: #dc2626;
+  --accent-ink: #1e3a8a;
 }
 
 @layer components {
@@ -19,11 +19,11 @@
   }
 
   .btn-primary {
-    @apply bg-blue-600 text-white shadow-lg shadow-blue-600/20 hover:bg-blue-700 focus-visible:outline-blue-200;
+    @apply bg-red-600 text-white shadow-lg shadow-red-600/20 hover:bg-red-700 focus-visible:outline-red-200;
   }
 
   .btn-secondary {
-    @apply border border-slate-200 bg-white text-slate-900 shadow-sm hover:border-slate-300 hover:text-slate-950 focus-visible:outline-slate-300;
+    @apply border border-blue-200 bg-white text-blue-900 shadow-sm hover:border-blue-300 hover:text-blue-950 focus-visible:outline-blue-300;
   }
 
   .btn-ghost {
@@ -41,7 +41,7 @@
   }
 
   .badge {
-    @apply inline-flex items-center rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-blue-900;
+    @apply inline-flex items-center rounded-full border border-red-100 bg-red-50 px-3 py-1 text-[10px] font-semibold uppercase tracking-widest text-red-800;
   }
 
   .eyebrow {

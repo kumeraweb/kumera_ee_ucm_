@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-label="Placeholder contacto image">
+  <rect width="1400" height="700" fill="#e2e8f0" />
+  <rect x="60" y="60" width="1280" height="580" fill="none" stroke="#94a3b8" stroke-width="6" stroke-dasharray="12 12" />
+  <text x="50%" y="50%" text-anchor="middle" fill="#64748b" font-family="Arial, sans-serif" font-size="40">CONTACTO IMAGE PLACEHOLDER</text>
+</svg>

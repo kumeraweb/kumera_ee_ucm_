@@ -1,32 +1,76 @@
 ---
 import { CONTACT_INFO, getWhatsAppLink } from '../data/config'
+import { PLANES } from '../data/planes'
 ---
 
-<section class="relative overflow-hidden bg-[#F4F7FB] text-slate-900">
+<section
+  class="relative overflow-hidden bg-[#F4F7FB] text-slate-900 min-h-[720px] md:min-h-[760px]"
+>
+  <!-- DUMMY: Reemplazar con imagen real para el background del hero -->
+  <div
+    class="absolute inset-0 bg-cover bg-center opacity-40"
+    style="background-image: url('/client.png');"
+  >
+  </div>
   <div class="absolute inset-0">
     <div class="absolute -left-24 top-10 h-64 w-64 rounded-full bg-blue-200/50 blur-3xl"></div>
     <div class="absolute right-0 top-0 h-80 w-80 rounded-full bg-sky-100/70 blur-3xl"></div>
   </div>
 
   <div class="relative max-w-7xl mx-auto px-4 pt-12 pb-12 md:pt-20 md:pb-20">
-    <div class="grid gap-12 md:grid-cols-[1.05fr_0.95fr] items-center">
+    <!-- Copy ajustado a planes de rescate en ambulancias privadas -->
+    <div class="grid gap-10 md:grid-cols-[1.05fr_0.95fr] items-start">
       <div class="space-y-6">
-        <div class="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-white px-4 py-1 text-[11px] font-semibold uppercase tracking-widest text-blue-700">
+        <div
+          class="inline-flex items-center gap-2 rounded-full border border-blue-200/70 bg-white px-4 py-1 text-[11px] font-semibold uppercase tracking-widest text-blue-700"
+        >
           Ejecutivo de contratación
         </div>
 
         <h1 class="font-black leading-[1.05] text-[clamp(2.2rem,6vw,3.6rem)]">
-          Cotiza y Contrata tu <span class="text-blue-700">Plan de Rescate Móvil</span> 100% Online
+          Contrata <span class="text-blue-700">planes de rescate en ambulancias privadas</span> 100% online
         </h1>
 
         <p class="text-slate-600 text-[clamp(1rem,2.6vw,1.25rem)] max-w-xl">
-          Compara las mejores opciones de ambulancia privada y asegura a tu familia hoy mismo.
+          Contratación rápida de planes de rescate, traslados programados y cobertura
+          extrahospitalaria.
         </p>
 
         <div class="flex flex-wrap gap-2">
-          <span class="rounded-full border border-blue-100 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-blue-700">Familias</span>
-          <span class="rounded-full border border-blue-100 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-blue-700">Adultos mayores</span>
-          <span class="rounded-full border border-blue-100 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-blue-700">Empresas</span>
+          <span
+            class="rounded-full border border-blue-100 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-blue-700"
+            >Familias</span
+          >
+          <span
+            class="rounded-full border border-blue-100 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-blue-700"
+            >Adultos mayores</span
+          >
+          <span
+            class="rounded-full border border-blue-100 bg-white px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-blue-700"
+            >Empresas</span
+          >
+        </div>
+
+        <div class="space-y-3">
+          <p class="text-xs font-semibold uppercase tracking-widest text-slate-500">
+            Planes disponibles hoy
+          </p>
+          <div class="grid gap-3 sm:grid-cols-2">
+            {
+              PLANES.map((plan) => (
+                <article class="card-strong p-4">
+                  <p class="text-[11px] font-semibold uppercase tracking-widest text-blue-700">
+                    {plan.etiqueta}
+                  </p>
+                  <h3 class="mt-2 text-sm font-black text-slate-900">{plan.nombre}</h3>
+                  <p class="mt-2 text-xs text-slate-600">{plan.textoPrincipal}</p>
+                  <p class="mt-2 text-xs font-semibold text-slate-700">
+                    {plan.precio} {plan.unidad}
+                  </p>
+                </article>
+              ))
+            }
+          </div>
         </div>
 
         <div class="flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -35,29 +79,42 @@ import { CONTACT_INFO, getWhatsAppLink } from '../data/config'
             target="_blank"
             class="btn btn-primary w-full sm:w-auto px-8 py-4 text-base md:text-lg"
           >
-            Solicitar cotización
+            Cotiza aquí
           </a>
-          <a href="#planes" class="btn btn-secondary w-full sm:w-auto px-8 py-4 text-base md:text-lg">
-            Ver planes disponibles
+          <a
+            href="#planes"
+            class="btn btn-secondary w-full sm:w-auto px-8 py-4 text-base md:text-lg"
+          >
+            Contratar plan
           </a>
         </div>
 
-        <p class="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-xs md:text-sm text-slate-600 max-w-xl">
-          <strong>Nota importante:</strong> Este sitio es exclusivamente para asesoría y contratación de planes. La prestación es realizada por proveedores externos. Si tiene una emergencia vital, llame al 131.
+        <p
+          class="rounded-2xl border border-slate-200 bg-white px-4 py-3 text-xs md:text-sm text-slate-600 max-w-xl"
+        >
+          <strong>Nota importante:</strong> Sitio de contratación de planes de rescate en ambulancias
+          privadas y servicios extrahospitalarios. No somos sistema de salud, no somos seguro y no prestamos
+          atención médica integral.
         </p>
       </div>
 
-      <div class="relative">
-        <div class="card-strong overflow-hidden border border-slate-100 bg-white/90 shadow-xl">
-          <img
-            src="/ejecutiva.png"
-            alt="Ejecutiva de ventas para planes de salud"
-            class="w-full h-auto"
-            loading="eager"
-          />
+      <div class="space-y-4">
+        <div class="card-strong p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-blue-700">
+            Contratación rápida
+          </p>
+          <p class="mt-3 text-sm text-slate-600">
+            Ejecutivo directo para comparar condiciones y contratar de forma guiada.
+          </p>
         </div>
-        <div class="absolute -bottom-6 -left-6 hidden rounded-2xl border border-slate-100 bg-white px-4 py-3 text-xs font-semibold text-slate-700 shadow-md md:block">
-          Gestión rápida y 100% online
+        <div class="card-strong p-6">
+          <p class="text-xs font-semibold uppercase tracking-widest text-blue-700">
+            Contacto ejecutivo
+          </p>
+          <p class="mt-3 text-sm text-slate-600">
+            Asesoría comercial personalizada sin derivaciones ni urgencias.
+          </p>
+          <p class="mt-3 text-xs text-slate-500">Teléfono: {CONTACT_INFO.phoneDisplay}</p>
         </div>
       </div>
     </div>
