@@ -1,6 +1,6 @@
 export const CONTACT_INFO = {
   brandTitle: 'Contratación de Planes de Rescate en Ambulancias Privadas',
-  roleLabel: 'Ejecutiva Certificada',
+  roleLabel: 'Ejecutiva Certificada 🇨🇱 ',
   phone: '56942874934',
   phoneDisplay: '+56 9 4287 4934',
   whatsappMessage: 'Hola, quiero cotizar un plan y conocer condiciones de contratación programada.',
